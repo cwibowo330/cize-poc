@@ -1,0 +1,139 @@
+section#socks {
+	background: #08a4df;
+	position: relative;
+	overflow: hidden;
+	@include w640 {
+		background: #08a4df url('http://img1.beachbodyimages.com/beachbody/image/upload/bbweb/cize/cize-socks-mobile-bg.gif') no-repeat;
+		background-size: cover;
+	}
+	@include w768 {
+		background: #08a4df url('http://img1.beachbodyimages.com/beachbody/image/upload/bbweb/cize/cize-socks-desktop-bg.gif') no-repeat center top;
+		background-size: cover;
+	}
+	@include w960 {
+		height: 513px;
+	}
+	
+	.container {
+		#socks-image {
+			background: url('http://img1.beachbodyimages.com/beachbody/image/upload/bbweb/cize/t-shirt-splatter.png') no-repeat;
+			position: absolute;
+			top: 0;
+			right: -12%;
+		    background-size: cover;
+		    width: 261px;
+		    height: 260px;
+		    @include w360 {
+			height: 240px;
+		    	right: -5%;
+		    }
+		    @include w375 {
+			height: 226px;
+		    	right: -10%;
+		    	width: 265px;
+		    }
+		    @include w480 {
+		    	right: 0;
+		    	width: 290px;
+  				height: 240px;
+		    }
+		    @include w568 {
+		    	right: -3%;
+		    	width: 326px;
+  				height: 326px;
+		    }
+		    @include w640 {
+		    	right: 0;
+		    	width: 344px;
+  				height: 302px;
+		    }
+		    @include w768 {
+		    	background: url('http://img1.beachbodyimages.com/beachbody/image/upload/bbweb/cize/t-shirt-splatter.png') no-repeat;
+		    	background-size: 100%;
+		    	right: -4%;
+			    width: 432px;
+			    height: 326px;
+		    }
+		    @include w960 {
+		    	width: 695px;
+		    	height: 520px;
+		    	right: -6%;
+		    }
+		}
+		.socks-wrap {
+			padding: 10px 0 8% 10px;
+			width: 100%;
+		    @include w480 {
+		    	padding: 50px 0 10% 20px;
+		    }
+		    @include w640 {
+		    	padding: 65px 0 9% 35px; 
+		    }
+		    @include w960 {
+		    	padding: 120px 0 9% 25px;
+		    }
+			h2 {
+				font-size: 23px;
+				text-transform: uppercase;
+				width: 140px;
+				font-family: 'Roboto Condensed', sans-serif;
+				@include w480 {
+					width: 225px;
+				}
+				@include w568 {
+					font-size: 32px;
+					width: 310px;
+				}
+				@include w667 {
+					width: 315px;
+				}
+				@include w768 {
+					font-size: 46px;
+  					width: 495px;
+				}
+				@include w960 {
+					font-size: 50px;
+				}
+			}
+			p {
+				color: #fff;
+				font-size: 13px;
+				line-height: 1.3em;
+				font-family: Arial, sans-serif;
+				padding-top: 10px;
+				width: 50%;
+				@include w360 {
+					width: 53%;
+				}
+				@include w568 {
+					width: 45%;
+					font-size: 14px;
+				}
+				@include w768 {
+					width: 60%;
+  					font-size: 19px;
+				}
+				@include w960 {
+					width: 52%;
+  					font-size: 21px;
+  					padding-bottom: 5px;
+				}
+			}
+			a {
+				color: $yellow;
+				font-family: Arial, sans-serif;
+				font-size: 12px;
+				@include w568 {
+					font-size: 13px;
+				}
+				@include w768 {
+					font-size: 16px;
+				}
+				@include w960 {
+					font-size: 20px;
+					padding-top: 10px;
+				}
+			}
+		}
+	}
+}

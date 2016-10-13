@@ -1,0 +1,168 @@
+section#what-you-get {
+  background: black;
+  color: white;
+}
+article#cta {
+  background: url("http://img1.beachbodyimages.com/beachbody/image/upload/bbweb/cize/cize-cta-bg-2.jpg") no-repeat center 58px;
+  background-size: 140%;
+  margin: 0 0 6px;
+  padding-bottom: 50%;
+@include w640 {
+  background-position: center 35px;
+}
+  @include w1100 {
+    background-position: center -10px;
+  }
+  .cta {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    @include w480 {
+      width: 480px;
+    }
+
+    @include w960 {
+      width: 768px;
+    }
+
+    @include w1100 {
+      background-size: 135%;
+    }
+
+    a {
+      display: block;
+      width: 100%;
+
+      @include w480 {
+        width: 444px;
+      }
+
+      @include w960 {
+        width: 768px;
+      }
+
+      img {
+        width: 100%;
+      }
+
+    }
+
+    .cta-info {
+      position: relative;
+      width: 100%;
+
+      @include w960 {
+        width: 84%;
+        margin: 0 auto;
+      }
+
+      a {
+        display: inline-block;
+        width: auto;
+        vertical-align: top;
+      }
+
+      img {
+        display: inline-block;
+        vertical-align: top;
+
+        &.bbb {
+          width: 30px;
+
+          @include w360 {
+            width: 35px;
+          }
+
+          @include w480 {
+            width: 30px;
+          }
+
+          @include w960 {
+            width: 50px;
+          }
+
+        }
+
+        &.mbg {
+          position: absolute;
+          top: -3px;
+          left: 38px;
+          width: 105px;
+
+          @include w360 {
+            left: 42px;
+            width: 120px;
+          }
+
+          @include w375 {
+            left: 45px;
+          }
+
+          @include w414 {
+            left: 59px;
+          }
+
+          @include w480 {
+            position: relative;
+            left: 0;
+            width: 105px;
+          }
+
+          @include w960 {
+            width: 174px;
+          }
+
+        }
+
+      }
+
+      small {
+        float: right;
+        width: 50%;
+        margin-top: -3px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.65em;
+        line-height: 1.2;
+
+        @include w360 {
+          font-size: 0.7em;
+        }
+
+        @include w375 {
+          font-size: 0.75em;
+        }
+
+        @include w414 {
+          width: 48%;
+        }
+
+        @include w480 {
+          display: inline-block;
+          float: none;
+          width: 62%;
+          margin: 0 16px;
+          font-size: 0.8em;
+        }
+
+        @include w960 {
+          width: 51%;
+          margin: 14px 38px 0;
+          font-size: 0.9em;
+          line-height: 1.4;
+        }
+
+        span {
+          text-transform: uppercase;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+

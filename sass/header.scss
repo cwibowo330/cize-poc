@@ -1,0 +1,349 @@
+ @import "/text/styles/reset/reset.css";
+
+#socialWidget {
+   height: 40px;
+   width: 100%;
+   background-color: #555555;
+   display: inline-block;
+   position: absolute;
+   top: 0px;
+   left: 50%;
+   padding-left: 15px;
+   ul {
+     padding-top: 7px;
+     li {
+       display: inline-block;
+       padding-right: 5px;
+     }
+   }
+ }
+
+nav.mainNavigationWrapper {
+  background-color: #433361;
+  color:#ffffff;
+  font-family: arial;
+  width: 960px;
+  margin: auto;
+  height: 40px;
+  z-index: 10000;
+
+
+  .mainNavigation {
+    padding: 8px 0;
+    a.logo {
+      float: left;
+      font-family: 'eurostile-extended', sans-serif;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 12px;
+      color: #fff;
+      letter-spacing: 3px;
+      padding-left: 10px;
+
+      sup {
+        line-height: 1px;
+        font-size: 5px !important;
+        top: -6px;
+        position: relative;
+        vertical-align: baseline !important;
+      }
+
+      img {
+        width: 24px;
+        margin-top: -2px;
+        vertical-align: middle;
+      }
+    }
+
+    .phoneSection {
+      font-size: 14px;
+      font-weight: 800;
+      float: right;
+      line-height: 24px;
+      padding-right: 10px;
+      font-style: normal;
+    }
+
+  }
+
+}
+
+@media (max-width: 960px) {
+ nav.mainNavigationWrapper {
+   width: 100%;
+ }
+}
+@media (max-width: 660px) {
+ nav.mainNavigationWrapper {
+   .mainNavigation {
+     a{
+       &.logo {
+         //font-size: 18px;
+
+         sup {
+           //top: -10px;
+         }
+       }
+     }
+   }
+ }
+}
+@media (max-width: 480px) {
+ nav.mainNavigationWrapper {
+   .mainNavigation {
+     a{
+       &.logo {
+         font-size: 14px;
+
+         sup {
+           top: -4px;
+         }
+       }
+     }
+   }
+ }
+}
+
+@media (max-width: 360px) {
+ nav.mainNavigationWrapper {
+   height: 32px;
+   .mainNavigation {
+     a {
+       &.logo {
+         font-size: 8px;
+         padding-left: 5px;
+         img {
+           width: 20px;
+         }
+       }
+     }
+     .phoneSection {
+       font-size: 10px;
+       padding-right: 5px;
+       line-height: 15px;
+     }
+   }
+ }
+}
+
+ .visually-hidden {
+   position: absolute;
+   clip: rect(1px 1px 1px 1px);  /* for Internet Explorer */
+   clip: rect(1px, 1px, 1px, 1px);
+   padding: 0;
+   border: 0;
+   height: 1px;
+   width: 1px;
+   overflow: hidden;
+ }
+
+#headerBB {
+  background-color: #2d2d2d;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  margin: 0 auto;
+  z-index: 10;
+
+  nav.mainNavigationWrapper {
+    background-color: #2d2d2d;
+    width: 100%;
+    max-width: 960px;
+    height: 40px;
+
+    @include w1100 {
+      max-width: 1100px;
+    }
+
+    .mainNavigation {
+      position: relative;
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 7px 0;
+      box-sizing: border-box;
+
+      @include w768 {
+        padding: 10px 0;
+      }
+
+      a.logo {
+        position: relative;
+        width: 40px;
+        padding: 3px 0 0 35px;
+        line-height: 1.5;
+        text-indent: -9999px;
+        z-index: 10;
+
+        @include w768 {
+          padding: 0 0 0 20px;
+        }
+
+        @include w960 {
+          text-indent: 0;
+          width: auto;
+          padding: 0 0 0 45px;
+        }
+
+        img {
+          position: absolute;
+          left: 14px;
+          width: 22px;
+        }
+
+      }
+
+      a {
+        color: #fff;
+      }
+
+      .phoneSection {
+        display: block;
+
+      }
+
+    }
+
+  }
+
+}
+
+.social-toggle {
+  position: absolute;
+  background: #404040;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 10;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @include w960 {
+    display: none;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    margin: 0;
+
+  }
+
+}
+
+.social-icons {
+  display: none;
+  position: absolute;
+  top: 33px;
+  right: 0;
+  width: 100%;
+  height: 20px;
+  padding: 7px 10px 13px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 10;
+
+  &.show {
+    display: block;
+  }
+
+  @include w375 {
+    width: 336px;
+  }
+
+  @include w960 {
+    display: block;
+    top: 38px;
+    width: 75%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  ul {
+    position: absolute;
+    float: right;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: auto;
+    padding: 20px 20px 40px; //Use this when 4+ social icons show
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    @include w960 {
+      float: right;
+      position: relative;
+      background: transparent;
+      width: auto;
+      padding: 7px 10px 0 0;
+    }
+
+    li {
+      display: inline-block;
+      width: 35%;
+      margin: 20px 20px 0; //Use this when 4+ social icons show
+      vertical-align: middle;
+
+      @include w960 {
+        width: auto !important;
+        margin: 0 0 0 10px;
+        vertical-align: top;
+      }
+
+      &#fbLikeBtnMax {
+        display: none;
+
+        @include w960 {
+          display: inline-block;
+          margin: 0 5px 5px 0;
+        }
+      }
+
+      &#fbLikeBtnMin {
+        display: inline-block;
+
+        @include w960 {
+          display: none;
+        }
+
+      }
+
+      &:first-child {
+        width: 20% !important;
+
+        @include w960 {
+          width: auto !important;
+        }
+
+      }
+
+      &:nth-child(3) {
+
+        @include w960 {
+          width: 80px !important;
+        }
+
+      }
+
+      &:nth-child(5) {
+
+        @include w960 {
+          margin-right: 28px;
+        }
+
+      }
+
+    }
+
+  }
+
+}
